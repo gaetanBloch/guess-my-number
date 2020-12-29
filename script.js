@@ -53,6 +53,8 @@ const play = myNumber => {
       if (checkLoss()) return;
       messageText.textContent = 'Correct Number!';
       myNumberText.textContent = myNumber;
+      myNumberText.style.width = '30rem';
+      document.querySelector('body').style.backgroundColor = '#60b347';
       checkHighScore(guess);
     }
   });
@@ -67,5 +69,7 @@ againButton.addEventListener('click', () => {
   score.textContent = 20;
   myNumberText.textContent = '?';
   guessNumber.value = '';
+  myNumberText.style.width = '15rem';
+  document.querySelector('body').style.backgroundColor = '#222';
   checkButton.removeEventListener('click', () => play(randomNumber()));
 });
