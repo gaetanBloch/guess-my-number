@@ -46,5 +46,5 @@ againButton.addEventListener('click', () => {
   score.textContent = 20;
   myNumberText.textContent = '?';
   guessNumber.value = '';
-  play(randomNumber());
+  checkButton.removeEventListener('click', () => play(randomNumber()));
 });
