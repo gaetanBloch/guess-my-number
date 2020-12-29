@@ -23,6 +23,12 @@ const checkHighScore = newScore => {
 const play = myNumber => {
   checkButton.addEventListener('click', () => {
     const guess = guessNumber.value;
+
+    if (!guess) {
+      message.textContent = 'No Number!';
+      return;
+    }
+
     if (guess > myNumber) {
       message.textContent = 'Too High...';
       score.textContent -= 1;
